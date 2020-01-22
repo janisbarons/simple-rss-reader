@@ -5,7 +5,7 @@
         </h5>
         {!! $item->get_description() !!}
 
-            <a href="{{ $item->get_link() }}" target="_blank">{{ __('Read more...') }}</a>
+            <a href="{{ $item->get_link() }}" target="_blank">{{ __('Read article') }}</a>
 
     </div>
 

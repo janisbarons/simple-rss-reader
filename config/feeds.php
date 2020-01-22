@@ -102,4 +102,12 @@ return [
 
     'curl.timeout' => null,
 
+    'channels' => [
+        'theregister' => [
+            'url' => 'https://www.theregister.co.uk/software/headlines.atom',
+            'limit' => 50,
+            'ttl' => 3600,
+        ]
+    ]
+
 ];

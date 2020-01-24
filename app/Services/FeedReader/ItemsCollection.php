@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 
 class ItemsCollection extends Collection
 {
-    private $defaultPerPage = 15;
+    private const DEFAULT_PAGE_SIZE;
 
     /**
      * Set pagination option for collection
@@ -20,7 +20,7 @@ class ItemsCollection extends Collection
     public function paginate($perPage = 15, $total = null, $page = null, $pageName = 'page'): LengthAwarePaginator
     {
         $page = $page ?: LengthAwarePaginator::resolveCurrentPage($pageName);
-        $perPage = $perPage ?: $this->defaultPerPage;
+        $perPage = $perPage ?: self::DEFAULT_PAGE_SIZE;
 
         return new LengthAwarePaginator(
             $this->forPage($page, $perPage),
